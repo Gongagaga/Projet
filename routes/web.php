@@ -25,4 +25,10 @@ Route::get('/', function () {
 
 //Route::get('/contacts', [ContactUsFormController::class, 'createForm']);
 Route::post('/contacts', [ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
+
+
+
+Route::get('/admin', [ContactUsFormController::class, 'index'])->name('admin.contact');
+
+Route::get('/delete/{id}', [ContactUsFormController::class, 'destroy'])->name('delete');
 //Route::post('/contacts', [ContactUsFormController::class, 'Teste'])->name('contact.store');
